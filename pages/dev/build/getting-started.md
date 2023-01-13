@@ -15,12 +15,12 @@ The ideal development process is completed in two steps:
 1. RPC endpoints to query or post transactions to the various EVM chains supported by Axelar.
 2. Contract addresses on various EVM chains for:
     - Axelar services such as the Gateway contract and ERC-20 token contracts.
-    - Your own custom `IAxelarExecutable` smart contracts.
+    - Your own custom `AxelarExecutable` smart contracts.
 
 **The Axelar local development environment allows you to:**
 
 * Create simulated EVM chains with RPC endpoints on your localhost. These chains come preloaded with the AxelarGateway, AxelarGasReceiver and a routed ERC-20 token contract (axlUSDC).
-* Deploy your custom `IAxelarExecutable` contracts to your simulated EVM chains.
+* Deploy your custom `AxelarExecutable` contracts to your simulated EVM chains.
 * Test your dApp against the RPC endoints and contract addresses of your local development environment.
 
 
@@ -36,7 +36,7 @@ For the actual development of your dApp, there are four simple steps (two mandat
 
 When you're ready to go live to testnet or mainnet: 
 
-1. Deploy your custom `IAxelarExecutable`contracts to the live EVM chains (testnet or mainnet) your dApp supports. 
+1. Deploy your custom `AxelarExecutable`contracts to the live EVM chains (testnet or mainnet) your dApp supports. 
 2. Swap out the RPC endpoints and contract addresses so they now point to live EVM chains (testnet or mainnet).
 
 ## Helpful resources
