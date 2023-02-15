@@ -22,7 +22,7 @@
   "controller": {
     "title": "Controller operations",
     "type": "doc",
-    "hidden": true
+    "display": "hidden"
   },
   "bug-bounty": {
     "title": "Bug Bounty",
@@ -35,7 +35,7 @@
   "terms-of-use": {
     "title": "Terms of Use",
     "type": "page",
-    "hidden": true
+    "display": "hidden"
   },
   "cli-docs": {
     "title": "CLI Docs",

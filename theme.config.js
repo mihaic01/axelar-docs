@@ -60,7 +60,7 @@ export default {
           height={24}
         />
         <span
-          title={`Axelar Network | ${TITLE_WITH_TRANSLATIONS[locale] || TITLE_WITH_TRANSLATIONS["en-US"]}`}
+          title={`Axelar | ${TITLE_WITH_TRANSLATIONS[locale] || TITLE_WITH_TRANSLATIONS["en-US"]}`}
           className="hidden md:inline select-none font-extrabold mx-2"
         >
           Axelar Network
@@ -76,7 +76,7 @@ export default {
     meta,
   }) => {
     const { route } = useRouter();
-    const ogImage = meta.image || "/images/og.png";
+    const ogImage = meta?.image || "/images/og.png";
     return (
       <>
         {/* Favicons, meta */}
@@ -108,14 +108,14 @@ export default {
         <meta
           name="description"
           content={
-            meta.description ||
+            meta?.description ||
             "Axelar Network Resources & Documentation"
           }
         />
         <meta
           name="og:description"
           content={
-            meta.description ||
+            meta?.description ||
             "Axelar Network Resources & Documentation"
           }
         />

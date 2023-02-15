@@ -4,6 +4,6 @@
   "operations": "Operations",
   "troubleshoot": {
     "title": "Troubleshoot",
-    "hidden": true
+    "display": "hidden"
   }
 }
