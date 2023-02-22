@@ -1,4 +1,4 @@
-# "Hello World" example dApp
+# Tutorial
 
 What better way to start than to lead by example? And a simple one we're all familiar with: "Hello World!"
 
@@ -6,11 +6,11 @@ What better way to start than to lead by example? And a simple one we're all fam
 
 Install [nodejs](https://nodejs.org/en/download/). Run `node -v` to check your installation.
 
-Version 16 is required. If needed, you can switch your node version via
+You should use node version 18. If needed, you can switch your node version via
 
 ```bash
-sudo npm i -g n
-sudo n v16.15.0
+npm i -g n
+sudo n v18
 ```
 
 Clone this repo:
@@ -27,21 +27,19 @@ npm ci
 npm run build
 ```
 
-## Set up deployer key
+## Set up a private key
 
 ```bash
-cp .env.example .env
+npm run setup
 ```
-
-Then update to your own private key.
 
 ## Deploy and run "Hello World"
 
-In order to run the examples against the local emulator, cd to the root directory (`axelar-examples`) in a separate terminal window and run:
+In order to run the examples against the local emulator, use a separate terminal window.
 ```bash
-node scripts/start
+node run start
 ```
-Leave this terminal open for the duration of the example.
+Leave this terminal open to keep your local server running for all of these examples.
 
 Run the "Call Contract" example. The application sends a message - "Hello World" - from a source to a destination chain using the `callContract` function.
 
@@ -50,14 +48,9 @@ Run the "Call Contract" example. The application sends a message - "Hello World"
 To deploy the contract, use the following command:
 
 ```bash
-npm run deploy evm/call-contract [local|testnet]
+npm run deploy evm/call-contract local
 ```
 
-For example:
-
-```bash
-node run deploy evm/call-contract local
-```
 
 Output:
 ```
@@ -97,7 +90,7 @@ value at Avalanche is Hello World
 
 #### 3. Run in testnet
 
-When you're ready, you can take the actual local example above and change the `local` environment parameters in the deploy/run scripts to `testnet`.
+When you're ready, you can take the actual local example above and change the `local` environment parameters in the deploy/run scripts to `testnet`. You'll need testnet tokens for each testnet you want to work with.
 
 That's it!
 
@@ -113,5 +106,3 @@ The full transaction flow was:
     - Invoked `setRemoteValue` on the deployed Moonbeam smart contract. This method first pays the gas receiver on Moonbeam the estimated gas cost, then calls `callContractWithToken` on the Moonbeam Gateway contract.
 4. After some time, the relay services detect the gas paid on Moonbeam and executes the smart contract on Avalanche, invoking the `_execute` method that updated the value to the message parameter.
 
-## Ready to [build](./build/getting-started)?
-## Want to learn more about [General Message Passing](./gmp-overview)?

@@ -125,11 +125,11 @@ export default {
         <meta
           name="og:title"
           content={
-            title ? title + " | Axelar Network" : "Axelar Network | Documentation"
+            title ? title + " | Axelar" : "Axelar | Documentation"
           }
         />
         <meta name="og:image" content={ogImage} />
-        <meta name="apple-mobile-web-app-title" content="Axelar Network" />
+        <meta name="apple-mobile-web-app-title" content="Axelar Documentation" />
       </>
     );
   },
